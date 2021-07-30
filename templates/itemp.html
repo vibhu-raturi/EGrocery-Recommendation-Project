@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 39%;
+        }
+        th, td {
+            text-align: center;
+            padding-left: 18%;
+        }
+        
+        
+        th {
+            background-color: #04AA6D;
+        }
+        body {
+            background: url(https://images.pexels.com/photos/952355/pexels-photo-952355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center fixed #000;
+            -webkit-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        div.Predictions {
+            padding: 50px 0;
+            text-align: center;
+            padding-right: 5%;
+        }
+        table.tab {
+            margin-left: auto; 
+            margin-right: auto;
+        }
+        
+      </style>
+
+<body>
+    <div class='Predictions'>
+    <h2 style='color:wheat'>Item Recommendations for You</h2>
+    <table class='tab'>
+        <tr>
+            <th>Rank</th>
+            <th>Items</th>
+        </tr>
+        {% for n in range(1,item|length) %}
+        <tr>
+            <td style='color:whitesmoke'><strong>{{ n }}</strong></td>
+            <td style='color:whitesmoke'><strong>{{item[loop.index0][0]}}</strong></td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+     
+    
+    
+
+</body>
+</html>
