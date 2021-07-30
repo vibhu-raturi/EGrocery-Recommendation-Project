@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <style>
+    body {
+        background-image: url(https://images.pexels.com/photos/952485/pexels-photo-952485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+            
+    }
+    @media only screen and (max-width: 600px){
+            body {
+                background-image: url(https://images.pexels.com/photos/952485/pexels-photo-952485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-attachment: fixed;
+                background-position: center;
+            
+            }
+        }
+    table.tab {
+        border-collapse: collapse;
+        width: 40%;
+    }
+    table.tab1 {
+        border-collapse: collapse;
+        width: 40%;
+    }
+    th, td {
+        text-align: center;
+        padding: 6px;
+    }
+    .column {
+            float: left;
+             width: 50%;
+            padding: 10px;
+        }
+    div.twoscreens{
+        padding-left: 35%;
+    }
+    div.center{
+            text-align: center;
+            padding-left: 20%;
+    }
+    div.twoscreens h3 {
+        background-color:#04AA6D;
+    }
+
+
+        </style>
+
+
+<body>
+    <div class='center'>
+        <h2 style='color:wheat'>Grocery Details & Recommendations</h2>
+    </div>
+    <div class='twoscreens'>
+        <div style="float:left;width:50%;">
+        <h3><strong>Items already purchased</strong></h3>
+        <table class='tab'>
+            {% for i in purchased %}
+            <tr>
+                <th style='color:whitesmoke'><strong>{{ i }}</strong></th>
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
+        <div style="float:right;width:50%;">
+            <h3><strong>Items not purchased & most likely to buy</strong></h3>
+            <table class='tab1'>
+                {% for i in rec %}
+                <tr>
+                    <th style='color:whitesmoke'><strong>{{ i }}</strong></th>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+     
+    
+    
+
+</body>
+</html>
