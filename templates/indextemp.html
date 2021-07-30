@@ -1,0 +1,71 @@
+<html>
+
+    <head>
+        <title>Model Deployment</title>
+    </head>
+    <style>
+        @media only screen and (min-width: 600px){
+            body {
+                background-image: url(https://images.pexels.com/photos/952353/pexels-photo-952353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+            }
+            
+        }
+        @media only screen and (max-width: 600px){
+            body {
+                background-image: url(https://images.pexels.com/photos/952353/pexels-photo-952353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-attachment: fixed;
+                background-position: center;
+            
+            }
+        }
+        </style>
+        <style>
+            div.welcome {
+                padding: 100px 0;
+                text-align: center;
+            }
+    
+            input[type="text"] {
+                 display: block;
+                 margin : auto;
+            }
+    
+    
+        </style>
+    <body>
+        <div class='welcome'>
+        <h1 style='color:wheat'><u>Welcome to Grocery Recommendation System</u></h1>
+        <h3>Enter the Item name for which you want recommendations</h3>
+        <form action="/submit" method='POST'>
+            <label for ="Item"><strong>Item:</strong></label><br>
+            <input type="text" id='item' name='item' value='' placeholder="Eg watermelon" required><br>
+            <label for ="Numberitems"><strong>Number of items:</strong></label><br>
+            <input type="text" id='topn' name='topn' value='' placeholder="0" required><br>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <p><strong>Please click on submit</strong></p>
+        
+        <br>
+        <h3>Please Enter Customer ID for Item details</h3>
+        <form action="/Submit" method='POST'>
+            <label for ="custid"><strong>Customer ID:</strong></label><br>
+            <input type="text" id='custid' name='custid' value='' placeholder="Eg CUST1" required><br>
+            <label for ="Numberitems"><strong>Number of items:</strong></label><br>
+            <input type="text" id='numitems' name='numitems' value='' placeholder="0" required><br>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <p><strong>Please click on submit</strong></p>
+        </div>
+        
+      
+    </body>
+
+</html>
